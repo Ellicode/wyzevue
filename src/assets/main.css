@@ -1,0 +1,8 @@
+@import '../assets/font/inter.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --default-font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' auto;
+  --default-font-feature-settings: 'cv11';
+}
