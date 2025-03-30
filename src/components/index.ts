@@ -1,23 +1,89 @@
-export { default as VAlert } from './VAlert.vue'
-export { default as VBadge } from './VBadge.vue'
-export { default as VButton } from './VButton.vue'
-export { default as VCheckbox } from './VCheckbox.vue'
-export { default as VDatePicker } from './VDatePicker.vue'
-export { default as VDropdown } from './VDropdown.vue'
-export { default as VDropdownItem } from './VDropdownItem.vue'
-export { default as VDropdownSeparator } from './VDropdownSeparator.vue'
-export { default as VHeader } from './VHeader.vue'
-export { default as VIconButton } from './VIconButton.vue'
-export { default as VModal } from './VModal.vue'
-export { default as VOTPField } from './VOTPField.vue'
-export { default as VProgressBar } from './VProgressBar.vue'
-export { default as VProgressRing } from './VProgressRing.vue'
-export { default as VRadioButton } from './VRadioButton.vue'
-export { default as VSelect } from './VSelect.vue'
-export { default as VSidebar } from './VSidebar.vue'
-export { default as VSidebarItem } from './VSidebarItem.vue'
-export { default as VSidePanel } from './VSidePanel.vue'
-export { default as VSpinner } from './VSpinner.vue'
-export { default as VTextField } from './VTextField.vue'
-export { default as VToolbar } from './VToolbar.vue'
-export { default as VTooltip } from './VTooltip.vue'
+import VAlert from './VAlert.vue'
+import VBadge from './VBadge.vue'
+import VButton from './VButton.vue'
+import VCheckbox from './VCheckbox.vue'
+import VDatePicker from './VDatePicker.vue'
+import VDropdown from './VDropdown.vue'
+import VDropdownItem from './VDropdownItem.vue'
+import VDropdownSeparator from './VDropdownSeparator.vue'
+import VHeader from './VHeader.vue'
+import VIconButton from './VIconButton.vue'
+import VModal from './VModal.vue'
+import VOTPField from './VOTPField.vue'
+import VProgressBar from './VProgressBar.vue'
+import VProgressRing from './VProgressRing.vue'
+import VRadioButton from './VRadioButton.vue'
+import VSelect from './VSelect.vue'
+import VSidebar from './VSidebar.vue'
+import VSidebarItem from './VSidebarItem.vue'
+import VSidePanel from './VSidePanel.vue'
+import VSpinner from './VSpinner.vue'
+import VTextField from './VTextField.vue'
+import VToolbar from './VToolbar.vue'
+import VTooltip from './VTooltip.vue'
+
+// Import all components
+
+// Collect all components in an array
+const components = [
+  VAlert,
+  VBadge,
+  VButton,
+  VCheckbox,
+  VDatePicker,
+  VDropdown,
+  VDropdownItem,
+  VDropdownSeparator,
+  VHeader,
+  VIconButton,
+  VModal,
+  VOTPField,
+  VProgressBar,
+  VProgressRing,
+  VRadioButton,
+  VSelect,
+  VSidebar,
+  VSidebarItem,
+  VSidePanel,
+  VSpinner,
+  VTextField,
+  VToolbar,
+  VTooltip,
+]
+
+// Define the install method for the plugin
+const install = (app) => {
+  components.forEach((component) => {
+    app.component(component.name, component)
+  })
+}
+
+// Export individual components for selective imports
+export {
+  VAlert,
+  VBadge,
+  VButton,
+  VCheckbox,
+  VDatePicker,
+  VDropdown,
+  VDropdownItem,
+  VDropdownSeparator,
+  VHeader,
+  VIconButton,
+  VModal,
+  VOTPField,
+  VProgressBar,
+  VProgressRing,
+  VRadioButton,
+  VSelect,
+  VSidebar,
+  VSidebarItem,
+  VSidePanel,
+  VSpinner,
+  VTextField,
+  VToolbar,
+  VTooltip,
+}
+
+// Export the plugin as the default export
+export default { install }
